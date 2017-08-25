@@ -18,6 +18,15 @@ You can do this with the -v parameter. In the following command we share the /tm
 $ docker run -v /tmp:/videos -it ffmpeg
 ```
 
+# Using ffmpeg
+
+You can use ffmpeg to download a RTSP video for further manipulation.
+
+```bash
+$ ffmpeg -i rtsp://my_rtsp_video_server:5554/VIDEO -acodec copy -vcodec copy /videos/teste.mp4
+```
+
+
 For example let's try to convert a mp4 video to yuv.
 The most common format is YUV4:2:0 planar 8-bit (YUV420p). 
 You can type ffmpeg -pix_fmts to get a list of all available formats.
@@ -27,5 +36,5 @@ There are some information you should have about your original video (i.e, video
 Place the former in the -r parameter and the later in the -s parameter.
 
 ```bash
-$ ffmpeg -i input.mp4 -f rawvideo -vcodec rawvideo -pix_fmt yuv420p -s 560 x 320 -r 31 rawvideo.yuv
+$ ffmpeg -i teste.mp4 -f rawvideo -vcodec rawvideo -pix_fmt yuv420p -s 560 x 320 -r 31 teste_rawvideo.yuv
 ```
