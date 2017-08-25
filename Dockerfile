@@ -6,4 +6,4 @@ RUN apt-get -y update && \
 
 RUN sudo add-apt-repository -y ppa:kirillshkrogalev/ffmpeg-next
 RUN sudo apt-get update
-RUN sudo apt-get install ffmpeg
+RUN sudo apt-get install -y ffmpeg
