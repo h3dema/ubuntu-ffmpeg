@@ -30,10 +30,6 @@ $ ffmpeg -i rtsp://my_rtsp_video_server:5554/VIDEO -acodec copy -vcodec copy /vi
 For example let's try to convert a mp4 video to yuv.
 The most common format is YUV4:2:0 planar 8-bit (YUV420p). 
 You can type ffmpeg -pix_fmts to get a list of all available formats.
-There are some information you should have about your original video (i.e, video.mp4):
-* The frame rate (e.g. 31 fps)
-* The format or frame size (e.g. 560 x 320)
-Place the former in the -r parameter and the later in the -s parameter.
 
 ```bash
 $ ffmpeg -y -i teste.mp4 -pix_fmt yuv420p -f yuv4mpegpipe teste.yuv
