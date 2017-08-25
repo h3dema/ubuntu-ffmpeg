@@ -36,5 +36,5 @@ There are some information you should have about your original video (i.e, video
 Place the former in the -r parameter and the later in the -s parameter.
 
 ```bash
-$ ffmpeg -i teste.mp4 -f rawvideo -vcodec rawvideo -pix_fmt yuv420p -s 560 x 320 -r 31 teste_rawvideo.yuv
+$ ffmpeg -y -i teste.mp4 -pix_fmt yuv420p -f yuv4mpegpipe teste.yuv
 ```
