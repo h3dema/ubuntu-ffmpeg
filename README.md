@@ -15,7 +15,7 @@ $ docker run -it ffmpeg
 Maybe you wish to share a local directory (in your computer) to a virtual directory inside the container.
 You can do this with the -v parameter. In the following command we share the /tmp directory in the computer as /videos directory in the container:
 ```bash
-$ docker run -v /tmp:/videos -it ffmpeg
+$ docker run -v /tmp:/videos -w /videos -it ffmpeg
 ```
 
 # Using ffmpeg
